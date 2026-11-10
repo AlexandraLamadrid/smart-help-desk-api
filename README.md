@@ -59,3 +59,62 @@ y la configuración técnica.
 La aplicación coordina los casos de uso.
 El dominio contiene las reglas del negocio
 y no depende de Spring Boot ni de JPA.
+
+## Día 2 - Modelado orientado a objetos
+
+Se implementó el agregado Ticket utilizando
+
+encapsulamiento y comportamiento de dominio.
+
+### Clases y objetos de valor
+
+- Ticket
+
+- TicketId
+
+- UserId
+
+- CategoryId
+
+- TicketStatus
+
+- TicketPriority
+
+### Reglas de negocio
+
+- Un ticket se crea en estado OPEN.
+
+- El ticket tiene identidad única mediante UUID.
+
+- El asunto y la descripción son obligatorios.
+
+- La prioridad no puede ser nula.
+
+- No se permite modificar un ticket cerrado.
+
+- Los cambios actualizan updatedAt.
+
+- createdAt permanece inmutable.
+
+### Decisiones de diseño
+
+Ticket es una entidad y utiliza una clase final
+
+porque tiene identidad y estado que puede cambiar.
+
+TicketId es un objeto de valor implementado
+
+mediante record porque es inmutable.
+
+Se evitan setters públicos para proteger
+
+las invariantes del dominio.
+
+### Pruebas
+
+Ejecutar:
+
+.\gradlew.bat clean test
+
+```
+ 
