@@ -117,4 +117,53 @@ Ejecutar:
 .\gradlew.bat clean test
 
 ```
+## Día 3 - Usuarios, colecciones y repositorios en memoria
+
+### Implementaciones
+
+- Entidad User.
+
+- Enum RoleName.
+
+- Gestión de roles mediante Set.
+
+- Activación y desactivación de usuarios.
+
+- UserRepositoryPort.
+
+- InMemoryUserRepositoryAdapter.
+
+- Entidad Category.
+
+- CategoryRepositoryPort.
+
+- InMemoryCategoryRepositoryAdapter.
+
+### Decisiones técnicas
+
+Se utiliza Set para evitar roles duplicados.
+
+Se utiliza ConcurrentHashMap para almacenar
+
+usuarios y categorías temporalmente.
+
+Los puertos definen contratos independientes
+
+de la tecnología de persistencia.
+
+Los adaptadores implementan esos contratos.
+
+Los nombres de categorías se comparan
+
+sin distinguir mayúsculas y minúsculas.
+
+### Pruebas
+
+35 pruebas ejecutadas correctamente.
+
+0 pruebas fallidas.
+
+Comando:
+
+.\gradlew.bat clean test
  
