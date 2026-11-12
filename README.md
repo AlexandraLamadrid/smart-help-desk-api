@@ -116,7 +116,6 @@ Ejecutar:
 
 .\gradlew.bat clean test
 
-```
 ## Día 3 - Usuarios, colecciones y repositorios en memoria
 
 ### Implementaciones
@@ -166,4 +165,44 @@ sin distinguir mayúsculas y minúsculas.
 Comando:
 
 .\gradlew.bat clean test
- 
+
+## Día 4 - Streams, Optional y Dashboard
+### Objetivo
+Implementar consultas y estadísticas sobre los tickets
+utilizando Java Streams y arquitectura hexagonal.
+### Componentes desarrollados
+- TicketRepositoryPort
+- InMemoryTicketRepositoryAdapter
+- DashboardSummary
+- GetDashboardSummaryUseCase
+- DashboardConfig
+### Funcionalidades
+- Guardar y consultar tickets en memoria.
+- Buscar tickets mediante Optional.
+- Agrupar tickets por estado.
+- Agrupar tickets por prioridad.
+- Contar tickets utilizando Streams.
+- Calcular el porcentaje de tickets cerrados.
+- Evitar la división por cero.
+- Configurar dependencias mediante Spring Beans.
+### Conceptos aplicados
+- Stream API
+- filter()
+- count()
+- Collectors.groupingBy()
+- Collectors.counting()
+- Optional
+- Records
+- Inyección de dependencias
+- Inversión de dependencias (SOLID)
+### Pruebas
+44 pruebas exitosas.
+0 pruebas fallidas.
+0 pruebas omitidas.
+Comando de ejecución:
+.\gradlew.bat clean test
+### Ejecución
+La aplicación inicia correctamente
+utilizando Spring Boot y Tomcat en el puerto 8080.
+
+ ```
